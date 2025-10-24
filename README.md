@@ -1,130 +1,234 @@
-# JeevanRakshak
+# 🌊 Jeevan-Rakshak: Water Quality & Health Monitoring System
 
-**JeevanRakshak** is a project that uses Flask for web development, EPANet for water network simulations, and various data analysis and machine learning tools to provide insights and predictions based on water network data.
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-jeevan--rakshak--wkrv.vercel.app-blue)](https://jeevan-rakshak-wkrv.vercel.app/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![React](https://img.shields.io/badge/React-17.0.2-blue.svg)](https://reactjs.org/)
+[![Firebase](https://img.shields.io/badge/Firebase-10.14.1-orange.svg)](https://firebase.google.com/)
 
-## Setup the Project
+**Jeevan-Rakshak** is a comprehensive water quality monitoring and health outbreak detection system that combines real-time data visualization, machine learning predictions, and GIS mapping to help communities monitor water safety and prevent health outbreaks.
 
-To get started, download and extract the project files to your local machine.
+## 🎯 Project Overview
 
-## Setup and Installation
+This project consists of two main applications:
 
-1. **Navigate to the project directory:**
+1. **Dashboard Application** - A React-based analytics dashboard for water quality monitoring and health data visualization
+2. **GIS Tracking Application** - A React-based mapping system for real-time water network monitoring and outbreak detection
 
-    ```
-    cd JeevanRakshak
-    ```
+## ✨ Key Features
 
-2. **Create and activate a virtual environment:**
+### 🏥 Dashboard Application
+- **Real-time Water Quality Monitoring** - Live data from sensors and water quality tests
+- **Health Outbreak Detection** - AI-powered risk assessment and hotspot identification
+- **Interactive Charts & Analytics** - Comprehensive data visualization with charts and graphs
+- **Multi-language Support** - Available in multiple languages
+- **Dark/Light Theme** - Customizable UI themes
+- **Export Functionality** - PDF and Excel export capabilities
+- **Power BI Integration** - Embedded Power BI reports for advanced analytics
 
-    ```
-    python -m venv my_env
-    source my_env/bin/activate  # On Windows use `my_env\Scripts\activate`
-    ```
+### 🗺️ GIS Tracking Application
+- **Interactive Water Network Mapping** - Real-time visualization of water distribution networks
+- **Sensor Node Management** - Add, edit, and monitor sensor nodes
+- **Pipeline Monitoring** - Track water pipelines with risk assessment
+- **Outbreak Risk Visualization** - Color-coded risk levels for different areas
+- **Firebase Integration** - Real-time data synchronization
+- **Mobile-Responsive Design** - Works seamlessly on all devices
 
-3. **Install the required packages:**
+## 🚀 Live Demo
 
-    ```
-    pip install Flask Flask-Cors pandas numpy matplotlib seaborn scikit-learn tensorflow epanettools
-    ```
+Visit our live application: **[jeevan-rakshak-wkrv.vercel.app](https://jeevan-rakshak-wkrv.vercel.app/)**
 
-## Project Requirements
+## 📋 Prerequisites
 
-This project requires the following Python packages:
+- Node.js (v14 or higher)
+- npm or yarn
+- Python 3.7+ (for backend services)
+- Firebase account (for real-time data)
 
-- `Flask`
-- `Flask-Cors`
-- `pandas`
-- `numpy`
-- `matplotlib`
-- `seaborn`
-- `scikit-learn`
-- `tensorflow`
-- `epanettools`
+## 🛠️ Installation & Setup
 
-## Running the Flask Modules
+### 1. Clone the Repository
 
-To run the Python modules, use the following commands:
-
-```
-py waterquality.py
-```
-```
-py sensor_allocation_final.py
-```
-```
-py finalpilferage.py
-```
-```
-py leak_model.py
+```bash
+git clone https://github.com/JK-77/JalRakshak.git
+cd JalRakshak
 ```
 
-# Running the React Applications
+### 2. Dashboard Application Setup
 
-## Running GIS Tracking
+```bash
+# Navigate to Dashboard directory
+cd Dashboard
 
-1. **Navigate to the `gisTracking-main` directory:**
+# Install dependencies
+npm install
 
-    ```
-    cd gisTracking-main
-    ```
+# Start the development server
+npm start
+```
 
-2. **Install dependencies:**
+The dashboard will be available at `http://localhost:3000`
 
-    ```
-    npm i
-    ```
+### 3. GIS Tracking Application Setup
 
-3. **Navigate to the `src` directory and start the application:**
+```bash
+# Navigate to GIS tracking directory
+cd gisTracking-main
 
-    ```
-    cd src
-    npm start
-    ```
+# Install dependencies
+npm install
 
-4. **Navigate back to the root directory:**
+# Start the development server
+npm start
+```
 
-    ```
-    cd ..
-    cd ..
-    ```
+The GIS application will be available at `http://localhost:3000`
 
-## Running Dashboard
+### 4. Backend Services (Optional)
 
-1. **Navigate to the `Dashboard` directory:**
+For full functionality, you may need to run backend services:
 
-    ```
-    cd Dashboard
-    ```
+```bash
+# Install Python dependencies
+pip install Flask Flask-Cors pandas numpy matplotlib seaborn scikit-learn tensorflow epanettools
 
-2. **Install dependencies:**
+# Run water quality prediction service
+python waterquality.py
 
-    ```
-    npm i
-    ```
+# Run sensor allocation service
+python sensor_allocation_final.py
 
-3. **Navigate to the `src` directory and start the application:**
+# Run pilferage detection service
+python finalpilferage.py
 
-    ```
-    cd src
-    npm start
-    ```
+# Run leak detection service
+python leak_model.py
+```
 
-4. **Navigate back to the root directory:**
+## 🏗️ Project Structure
 
-    ```
-    cd ..
-    ```
+```
+Jeevan-Rakshak/
+├── Dashboard/                    # Main dashboard application
+│   ├── src/
+│   │   ├── components/          # Reusable UI components
+│   │   ├── pages/              # Main application pages
+│   │   │   ├── Dashboard.jsx   # Main dashboard
+│   │   │   ├── WaterQuality.jsx # Water quality analysis
+│   │   │   ├── OutbreakRisk.jsx # Risk assessment
+│   │   │   └── ...
+│   │   ├── contexts/           # React contexts
+│   │   ├── data/              # Static data and assets
+│   │   └── firebaseConfig.js  # Firebase configuration
+│   └── package.json
+├── gisTracking-main/           # GIS mapping application
+│   ├── src/
+│   │   ├── App.js             # Main GIS application
+│   │   ├── FireApp.js         # Firebase integration
+│   │   └── firebase.js        # Firebase configuration
+│   └── package.json
+├── LICENSE
+└── README.md
+```
 
+## 🔧 Technologies Used
 
+### Frontend
+- **React 17.0.2** - UI framework
+- **Syncfusion Components** - Advanced UI components
+- **Recharts** - Data visualization
+- **Tailwind CSS** - Styling
+- **React Router** - Navigation
+- **Firebase** - Real-time database and authentication
 
-## License
+### Backend & ML
+- **Flask** - Python web framework
+- **TensorFlow** - Machine learning models
+- **Scikit-learn** - Data analysis
+- **Pandas & NumPy** - Data processing
+- **EPANet** - Water network simulation
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+### Mapping & GIS
+- **React Leaflet** - Interactive maps
+- **Leaflet** - Mapping library
+- **OpenStreetMap** - Map tiles
 
-## Acknowledgements
+## 📊 Key Features Breakdown
 
-- **EPANettools** for water network simulations.
-- **TensorFlow and Keras** for machine learning models.
-- **Flask** for creating the web application.
-- **Various data analysis libraries** like `pandas`, `numpy`, and `matplotlib`.
+### Water Quality Monitoring
+- **CSV Upload & Analysis** - Upload water quality data for ML prediction
+- **Real-time Sensor Data** - Live monitoring of water quality parameters
+- **Risk Assessment** - AI-powered risk scoring and recommendations
+- **Alert System** - Automated alerts for unsafe water conditions
 
+### Health Outbreak Detection
+- **Hotspot Identification** - Geographic identification of high-risk areas
+- **Trend Analysis** - Historical data analysis and trend prediction
+- **Risk Factors** - Multi-factor risk assessment including:
+  - Water quality indicators
+  - Reported health cases
+  - Population density
+  - Seasonal factors
+
+### GIS Network Management
+- **Interactive Mapping** - Real-time water network visualization
+- **Sensor Management** - Add and monitor sensor nodes
+- **Pipeline Tracking** - Monitor water distribution pipelines
+- **Risk Visualization** - Color-coded risk levels on maps
+
+## 🎨 UI/UX Features
+
+- **Responsive Design** - Works on desktop, tablet, and mobile
+- **Dark/Light Themes** - Customizable color schemes
+- **Multi-language Support** - Internationalization ready
+- **Accessibility** - WCAG compliant components
+- **Modern Design** - Clean, intuitive interface
+
+## 🔐 Firebase Configuration
+
+The project uses Firebase for:
+- **Real-time Database** - Live data synchronization
+- **Firestore** - Document storage
+- **Authentication** - User management
+- **Analytics** - Usage tracking
+
+## 📱 Mobile App
+
+The project includes a mobile application (referenced in the dashboard) for field data collection and monitoring.
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- **EPANet Tools** - Water network simulation capabilities
+- **TensorFlow & Keras** - Machine learning framework
+- **Firebase** - Real-time database and cloud services
+- **Syncfusion** - Advanced UI components
+- **OpenStreetMap** - Open-source mapping data
+
+## 📞 Support
+
+For technical support or questions:
+- **Phone**: 8265096155
+- **Email**: [Contact through GitHub Issues](https://github.com/JK-77/JalRakshak/issues)
+
+## 🔗 Related Links
+
+- [Project Presentation](https://drive.google.com/file/d/1U69NSHG5IizTqg8Tm9rK__9jTCdIJV5v/view?usp=sharing)
+- [Live Demo](https://jeevan-rakshak-wkrv.vercel.app/)
+- [GitHub Repository](https://github.com/JK-77/JalRakshak)
+
+---
+
+**Made with ❤️ by Team Jeevan-Rakshak**
+
+*Protecting communities through intelligent water quality monitoring and health outbreak prevention.*
